@@ -1,0 +1,278 @@
+.page .page-back .back-sky [data-multiple] [data-movement] span {
+    background-image: url('/public/images/back-sky.png');
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    transform: translateZ(-2px) scale(1.5); /* スケールを調整 */
+    z-index: -2;
+}
+.page .page-back .back-cloud [data-multiple] [data-movement] span {
+    background-image: url('/public/images/back-cloud.png');
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    transform: translateZ(-1px) scale(1.2); /* スケールを調整 */
+    z-index: -1;
+}
+.page .page-front .front-cloud [data-multiple] [data-movement] span {
+    background-image: url('/public/images/front-cloud.png');
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    transform: translateZ(0px) scale(1); /* スケールを調整 */
+    z-index: 2;
+}
+.page .page-back .back-sky [data-multiple] [data-movement] span,
+.page .page-back .back-cloud [data-multiple] [data-movement] span,
+.page .page-front .front-cloud [data-multiple] [data-movement] span {
+    background-size: 100% 100%;
+}
+
+.page .page-back .back-sky [data-multiple] [data-movement] span {
+    background-repeat: repeat-y;
+    background-repeat: repeat-x;
+}
+
+
+.page .page-back .back-sky [data-multiple] [data-movement] span,
+.page .page-back .back-cloud [data-multiple] [data-movement] span,
+.page .page-front .front-cloud [data-multiple] [data-movement] span {
+    min-height: 100vh;
+}
+
+
+
+/* @media screen and (min-width: 1281px) {
+    body {
+        --pv: calc(1px / 2)
+    }
+}
+@media screen and (max-width: 1280px) {
+    body {
+        --pv: calc(100vw / 2560)
+    }
+}
+
+html {
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%
+}
+
+* {
+    padding: 0;
+    margin: 0
+}
+
+a {
+    text-decoration: none
+}
+
+body {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    overscroll-behavior: none
+}
+
+html,body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    color: #E6E6E6;
+    font-family: bebas-neue-pro, sans-serif;
+    font-feature-settings: 'palt';
+    text-spacing-trim: normal
+}
+
+img {
+    display: block;
+    width: 100%
+}
+
+.page::after {
+    content: '';
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/public/images/noize.png) center center/calc(1px * 960 / 2) calc(1px * 960 / 2);
+    pointer-events: none;
+    user-select: none;
+    z-index: 9999
+}
+
+.page .page-back {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    user-select: none
+}
+
+.page .page-back .back-sky {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%
+}
+
+.page .page-back .back-sky [data-multiple] [data-movement] {
+    position: relative;
+    height: calc(4263.6 * (100vh / 2015))
+}
+
+@media screen and (max-width: 1024px) {
+    .page .page-back .back-sky [data-multiple] [data-movement] {
+        height:calc(((1440 * (100vh / 1440)) + (1562 * (100vw / 828)) + (1264 * (100vw / 828))) * 0.6);
+        transition: transform 0.125s linear 0s
+    }
+}
+
+.page .page-back .back-sky [data-multiple] [data-movement] span {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto
+}
+
+@media screen and (min-width: 960px) {
+    .page .page-back .back-sky [data-multiple] [data-movement] span {
+        background:url(/public/images/back-sky.png) repeat-x center top/auto calc(2400 * (100vh / 2015))
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .page .page-back .back-sky [data-multiple] [data-movement] span {
+        background:url(/public/images/back-sky.png) repeat-x center top/auto calc(2205 * (100vw / 828))
+    }
+}
+
+.page .page-back .back-cloud {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%
+}
+
+.page .page-back .back-cloud [data-multiple] [data-movement] {
+    position: relative;
+    height: calc(4974.2 * (100vh / 2015))
+}
+
+@media screen and (max-width: 1024px) {
+    .page .page-back .back-cloud [data-multiple] [data-movement] {
+        height:calc(((1440 * (100vh / 1440)) + (1562 * (100vw / 828)) + (1264 * (100vw / 828))) * 0.7);
+        transition: transform 0.125s linear 0s
+    }
+}
+
+.page .page-back .back-cloud [data-multiple] [data-movement] span {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto
+}
+
+@media screen and (min-width: 960px) {
+    .page .page-back .back-cloud [data-multiple] [data-movement] span {
+        background:url(/public/images/back-cloud.png) repeat-x center top/auto calc(3528 * (100vh / 2015))
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .page .page-back .back-cloud [data-multiple] [data-movement] span {
+        background:url(/public/images/back-cloud.png) repeat-x center top/auto calc(1500 * (100vw / 828))
+    }
+}
+
+.page .page-front {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    user-select: none;
+    z-index: 1
+}
+
+.page .page-front .front-cloud {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%
+}
+
+.page .page-front .front-cloud [data-multiple] [data-movement] {
+    position: relative;
+    height: calc(8527.2 * (100vh / 2015))
+}
+
+@media screen and (max-width: 1024px) {
+    .page .page-front .front-cloud [data-multiple] [data-movement] {
+        height:calc(((1440 * (100vh / 1440)) + (1562 * (100vw / 828)) + (1264 * (100vw / 828))) * 1.1);
+        transition: transform 0.125s linear 0s
+    }
+}
+
+.page .page-front .front-cloud [data-multiple] [data-movement] span {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto
+}
+
+@media screen and (min-width: 960px) {
+    .page .page-front .front-cloud [data-multiple] [data-movement] span {
+        background:url(/public/images/front-cloud.png) repeat-x center top/auto calc(2545 * (100vh / 2015))
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .page .page-front .front-cloud [data-multiple] [data-movement] span {
+        background:url(/public/images/front-cloud.png) repeat-x center top/auto calc(1700 * (100vw / 828))
+    }
+}
+
+.page .page-main {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%
+}
+
+@media screen and (max-width: 1024px) {
+    .page .page-main .main-scroll {
+        height:100%;
+        overflow: auto
+    }
+}
+
+.page .page-main .main-scroll .scroll-container .container-main {
+    transform-origin: center 97%
+}
+
+@media screen and (max-width: 1024px) {
+    .page .page-main .main-scroll .scroll-container .container-main {
+        position:relative;
+        overflow: hidden
+    }
+}
+
+.page .page-main {
+    opacity: 1;
+    transition: all 0.5s linear 0s
+} */
