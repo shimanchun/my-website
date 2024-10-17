@@ -1,19 +1,19 @@
 .page .page-back .back-sky [data-multiple] [data-movement] span {
-    background-image: url('./public/images/back-sky.png');
+    background-image: url('../public/images/back-sky.png');
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     transform: translateZ(-2px) scale(1.5); /* スケールを調整 */
     z-index: -2;
 }
 .page .page-back .back-cloud [data-multiple] [data-movement] span {
-    background-image: url('./public/images/back-cloud.png');
+    background-image: url('../public/images/back-cloud.png');
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     transform: translateZ(-1px) scale(1.2); /* スケールを調整 */
     z-index: -1;
 }
 .page .page-front .front-cloud [data-multiple] [data-movement] span {
-    background-image: url('./public/images/front-cloud.png');
+    background-image: url('../public/images/front-cloud.png');
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     transform: translateZ(0px) scale(1); /* スケールを調整 */
