@@ -1,19 +1,19 @@
 .page .page-back .back-sky [data-multiple] [data-movement] span {
-    background-image: url('/public/images/back-sky.png');
+    background-image: url('./public/images/back-sky.png');
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     transform: translateZ(-2px) scale(1.5); /* スケールを調整 */
     z-index: -2;
 }
 .page .page-back .back-cloud [data-multiple] [data-movement] span {
-    background-image: url('/public/images/back-cloud.png');
+    background-image: url('./public/images/back-cloud.png');
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     transform: translateZ(-1px) scale(1.2); /* スケールを調整 */
     z-index: -1;
 }
 .page .page-front .front-cloud [data-multiple] [data-movement] span {
-    background-image: url('/public/images/front-cloud.png');
+    background-image: url('./public/images/front-cloud.png');
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     transform: translateZ(0px) scale(1); /* スケールを調整 */
@@ -96,7 +96,7 @@ img {
     top: 0;
     width: 100%;
     height: 100%;
-    background: url(/public/images/noize.png) center center/calc(1px * 960 / 2) calc(1px * 960 / 2);
+    background: url(./public/images/noize.png) center center/calc(1px * 960 / 2) calc(1px * 960 / 2);
     pointer-events: none;
     user-select: none;
     z-index: 9999
@@ -143,13 +143,13 @@ img {
 
 @media screen and (min-width: 960px) {
     .page .page-back .back-sky [data-multiple] [data-movement] span {
-        background:url(/public/images/back-sky.png) repeat-x center top/auto calc(2400 * (100vh / 2015))
+        background:url(./public/images/back-sky.png) repeat-x center top/auto calc(2400 * (100vh / 2015))
     }
 }
 
 @media screen and (max-width: 1024px) {
     .page .page-back .back-sky [data-multiple] [data-movement] span {
-        background:url(/public/images/back-sky.png) repeat-x center top/auto calc(2205 * (100vw / 828))
+        background:url(./public/images/back-sky.png) repeat-x center top/auto calc(2205 * (100vw / 828))
     }
 }
 
@@ -184,13 +184,13 @@ img {
 
 @media screen and (min-width: 960px) {
     .page .page-back .back-cloud [data-multiple] [data-movement] span {
-        background:url(/public/images/back-cloud.png) repeat-x center top/auto calc(3528 * (100vh / 2015))
+        background:url(./public/images/back-cloud.png) repeat-x center top/auto calc(3528 * (100vh / 2015))
     }
 }
 
 @media screen and (max-width: 1024px) {
     .page .page-back .back-cloud [data-multiple] [data-movement] span {
-        background:url(/public/images/back-cloud.png) repeat-x center top/auto calc(1500 * (100vw / 828))
+        background:url(./public/images/back-cloud.png) repeat-x center top/auto calc(1500 * (100vw / 828))
     }
 }
 
@@ -236,13 +236,13 @@ img {
 
 @media screen and (min-width: 960px) {
     .page .page-front .front-cloud [data-multiple] [data-movement] span {
-        background:url(/public/images/front-cloud.png) repeat-x center top/auto calc(2545 * (100vh / 2015))
+        background:url(./public/images/front-cloud.png) repeat-x center top/auto calc(2545 * (100vh / 2015))
     }
 }
 
 @media screen and (max-width: 1024px) {
     .page .page-front .front-cloud [data-multiple] [data-movement] span {
-        background:url(/public/images/front-cloud.png) repeat-x center top/auto calc(1700 * (100vw / 828))
+        background:url(./public/images/front-cloud.png) repeat-x center top/auto calc(1700 * (100vw / 828))
     }
 }
 
