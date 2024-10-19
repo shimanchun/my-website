@@ -37,7 +37,8 @@ body {
 
 .hero p {
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0px;
+    margin-top: 2px;
     transform: translateY(30px);
     opacity: 0;
     color: #fff;
@@ -47,6 +48,12 @@ body {
     padding: 5rem 2rem;
     position: relative;
     z-index: 0;
+}
+
+@media (max-width: 768px) {
+    .bands{
+        padding: 0rem 2rem;
+    }
 }
 
 .bands h2 {
@@ -151,6 +158,12 @@ body {
     /* backdrop-filter: blur(10px); */
     z-index: 100;
 }
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
 
 .nav-links {
     display: flex;
@@ -173,7 +186,12 @@ body {
 }
 
 @media (max-width: 768px) {
-
+    .nav{
+        padding: 1rem 1rem;
+    }
+    .nav-links{
+        gap: 1rem;
+    }
 }
 
 .page .page-front .front-cloud [data-multiple] [data-movement] span {
@@ -220,6 +238,7 @@ body {
     bottom: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .back-sky {
@@ -331,6 +350,11 @@ body {
     overflow: hidden;
 }
 
+.back-cloud{
+    overflow: hidden;
+
+}
+
 .page .page-back .back-cloud [data-multiple] [data-movement] span {
     background-image: url('../images/pc/back-cloud.png');
     position: absolute;
@@ -415,6 +439,11 @@ body {
     border-radius: 8px;
     overflow: hidden;
     margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .timetable{
+        width: 90%;
+    }
 }
 
 .time-slot {
