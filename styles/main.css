@@ -1,28 +1,28 @@
 .page .page-back .back-sky [data-multiple] [data-movement] span {
-    background-image: url('../public/images/back-sky.png');
+    background-image: url('../images/pc/back-sky.png');
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    transform: translateZ(-2px) scale(1.5); /* スケールを調整 */
     z-index: -2;
 }
 .page .page-back .back-cloud [data-multiple] [data-movement] span {
-    background-image: url('../public/images/back-cloud.png');
+    background-image: url('../images/pc/back-cloud.png');
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    transform: translateZ(-1px) scale(1.2); /* スケールを調整 */
     z-index: -1;
 }
 .page .page-front .front-cloud [data-multiple] [data-movement] span {
-    background-image: url('../public/images/front-cloud.png');
+    background: url('../images/pc/front-cloud.png');
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    transform: translateZ(0px) scale(1); /* スケールを調整 */
     z-index: 2;
 }
 .page .page-back .back-sky [data-multiple] [data-movement] span,
 .page .page-back .back-cloud [data-multiple] [data-movement] span,
 .page .page-front .front-cloud [data-multiple] [data-movement] span {
-    background-size: 100% 100%;
+    justify-content: center;  
+    align-items: center;      
+    background-size: contain;
+    min-height: 100vh;
 }
 
 .page .page-back .back-sky [data-multiple] [data-movement] span {
@@ -30,249 +30,220 @@
     background-repeat: repeat-x;
 }
 
+@media (max-width: 768px) {
+    .page .page-back .back-sky [data-multiple] [data-movement] span {
+        background-image: url('../images/sp/back-sky.png');
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: -2;
+    }
+}
+@media (max-width: 768px) {
+    .page .page-back .back-cloud [data-multiple] [data-movement] span {
+        background-image: url('../images/sp/back-cloud.png');
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: -1;
+    }
+}
+@media (max-width: 768px) {
+    .page .page-front .front-cloud [data-multiple] [data-movement] span {
+        background-image: url('../images/sp/front-cloud.png');
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: 2;
+    }
+}
 
-.page .page-back .back-sky [data-multiple] [data-movement] span,
-.page .page-back .back-cloud [data-multiple] [data-movement] span,
 .page .page-front .front-cloud [data-multiple] [data-movement] span {
-    min-height: 100vh;
-}
-
-
-
-/* @media screen and (min-width: 1281px) {
-    body {
-        --pv: calc(1px / 2)
-    }
-}
-@media screen and (max-width: 1280px) {
-    body {
-        --pv: calc(100vw / 2560)
-    }
-}
-
-html {
-    box-sizing: border-box;
-    -webkit-text-size-adjust: 100%
-}
-
-* {
-    padding: 0;
-    margin: 0
-}
-
-a {
-    text-decoration: none
-}
-
-body {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-    overscroll-behavior: none
-}
-
-html,body {
-    position: relative;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
-    background: #000000;
-    color: #E6E6E6;
-    font-family: bebas-neue-pro, sans-serif;
-    font-feature-settings: 'palt';
-    text-spacing-trim: normal
+    margin: auto
 }
 
-img {
-    display: block;
-    width: 100%
+/* 画像以外のスタイル */
+
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.page::after {
+.hero-content {
+    text-align: center;
+    z-index: 2;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    transform: translateY(50px);
+    opacity: 0;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #ff3366, #ff6b6b);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+.cta-button::after {
     content: '';
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: url(./public/images/noize.png) center center/calc(1px * 960 / 2) calc(1px * 960 / 2);
-    pointer-events: none;
-    user-select: none;
-    z-index: 9999
-}
-
-.page .page-back {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    user-select: none
-}
-
-.page .page-back .back-sky {
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transform: rotate(45deg);
+    animation: buttonShine 3s infinite;
 }
 
-.page .page-back .back-sky [data-multiple] [data-movement] {
+@keyframes buttonShine {
+    from {
+        transform: translateX(-100%) rotate(45deg);
+    }
+    to {
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+.bands {
+    padding: 5rem 2rem;
     position: relative;
-    height: calc(4263.6 * (100vh / 2015))
+    z-index: 2;
 }
 
-@media screen and (max-width: 1024px) {
-    .page .page-back .back-sky [data-multiple] [data-movement] {
-        height:calc(((1440 * (100vh / 1440)) + (1562 * (100vw / 828)) + (1264 * (100vw / 828))) * 0.6);
-        transition: transform 0.125s linear 0s
-    }
+.band-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.page .page-back .back-sky [data-multiple] [data-movement] span {
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+.band-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    backdrop-filter: blur(1px);
+}
+
+.band-card:hover {
+    transform: translateY(-10px);
+}
+
+.band-image {
     width: 100%;
-    height: 100%;
-    margin: auto
+    height: 200px;
+    background: #333;
+    margin-bottom: 1rem;
+    border-radius: 5px;
 }
 
-@media screen and (min-width: 960px) {
-    .page .page-back .back-sky [data-multiple] [data-movement] span {
-        background:url(./public/images/back-sky.png) repeat-x center top/auto calc(2400 * (100vh / 2015))
-    }
+.band-card {
+    color: white;
 }
 
-@media screen and (max-width: 1024px) {
-    .page .page-back .back-sky [data-multiple] [data-movement] span {
-        background:url(./public/images/back-sky.png) repeat-x center top/auto calc(2205 * (100vw / 828))
-    }
-}
-
-.page .page-back .back-cloud {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%
-}
-
-.page .page-back .back-cloud [data-multiple] [data-movement] {
+.schedule {
+    padding: 5rem 2rem;
+    /* background: rgba(0, 20, 40, 0.9); */
     position: relative;
-    height: calc(4974.2 * (100vh / 2015))
+    z-index: 2;
 }
 
-@media screen and (max-width: 1024px) {
-    .page .page-back .back-cloud [data-multiple] [data-movement] {
-        height:calc(((1440 * (100vh / 1440)) + (1562 * (100vw / 828)) + (1264 * (100vw / 828))) * 0.7);
-        transition: transform 0.125s linear 0s
-    }
+.schedule h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
 }
 
-.page .page-back .back-cloud [data-multiple] [data-movement] span {
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    margin: auto
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-@media screen and (min-width: 960px) {
-    .page .page-back .back-cloud [data-multiple] [data-movement] span {
-        background:url(./public/images/back-cloud.png) repeat-x center top/auto calc(3528 * (100vh / 2015))
-    }
+.event {
+    display: flex;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateX(-50px);
 }
 
-@media screen and (max-width: 1024px) {
-    .page .page-back .back-cloud [data-multiple] [data-movement] span {
-        background:url(./public/images/back-cloud.png) repeat-x center top/auto calc(1500 * (100vw / 828))
-    }
+.time {
+    width: 100px;
+    font-weight: bold;
+    color: #ff3366;
 }
 
-.page .page-front {
+.description {
+    flex: 1;
+    padding-left: 2rem;
+    border-left: 2px solid #ff3366;
+}
+
+.nav {
     position: fixed;
-    left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    user-select: none;
-    z-index: 1
-}
-
-.page .page-front .front-cloud {
-    position: absolute;
     left: 0;
-    top: 0;
-    width: 100%
-}
-
-.page .page-front .front-cloud [data-multiple] [data-movement] {
-    position: relative;
-    height: calc(8527.2 * (100vh / 2015))
-}
-
-@media screen and (max-width: 1024px) {
-    .page .page-front .front-cloud [data-multiple] [data-movement] {
-        height:calc(((1440 * (100vh / 1440)) + (1562 * (100vw / 828)) + (1264 * (100vw / 828))) * 1.1);
-        transition: transform 0.125s linear 0s
-    }
-}
-
-.page .page-front .front-cloud [data-multiple] [data-movement] span {
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
     width: 100%;
-    height: 100%;
-    margin: auto
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: rgba(0, 20, 40, 0.8); */
+    /* backdrop-filter: blur(10px); */
+    z-index: 100;
 }
 
-@media screen and (min-width: 960px) {
-    .page .page-front .front-cloud [data-multiple] [data-movement] span {
-        background:url(./public/images/front-cloud.png) repeat-x center top/auto calc(2545 * (100vh / 2015))
-    }
+.nav-links {
+    display: flex;
+    gap: 2rem;
 }
 
-@media screen and (max-width: 1024px) {
-    .page .page-front .front-cloud [data-multiple] [data-movement] span {
-        background:url(./public/images/front-cloud.png) repeat-x center top/auto calc(1700 * (100vw / 828))
-    }
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-.page .page-main {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%
+.nav-links a:hover {
+    color: #ff3366;
 }
-
-@media screen and (max-width: 1024px) {
-    .page .page-main .main-scroll {
-        height:100%;
-        overflow: auto
-    }
-}
-
-.page .page-main .main-scroll .scroll-container .container-main {
-    transform-origin: center 97%
-}
-
-@media screen and (max-width: 1024px) {
-    .page .page-main .main-scroll .scroll-container .container-main {
-        position:relative;
-        overflow: hidden
-    }
-}
-
-.page .page-main {
-    opacity: 1;
-    transition: all 0.5s linear 0s
-} */
