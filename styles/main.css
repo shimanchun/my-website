@@ -53,6 +53,8 @@ body {
 @media (max-width: 768px) {
     .bands{
         padding: 0rem 2rem;
+        position: relative;
+        z-index: 0;
     }
 }
 
@@ -352,7 +354,34 @@ body {
 
 .back-cloud{
     overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
 
+}
+
+.back-cloud [data-multiple] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.back-cloud [data-movement] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .page .page-back .back-cloud [data-multiple] [data-movement] span {
@@ -442,7 +471,15 @@ body {
 }
 @media (max-width: 768px) {
     .timetable{
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(145deg, #6fdbdc, #28b5b5);
+        color: white;
         width: 90%;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 0 auto;
     }
 }
 
