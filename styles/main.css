@@ -8,7 +8,7 @@ body {
     font-family: 'Girassol', sans-serif;
     margin: 0;
     overflow-x: hidden;
-    
+
 }
 
 .hero {
@@ -183,6 +183,25 @@ body {
     background-repeat: no-repeat;
 }
 
+@media (max-width: 768px) {
+    .page .page-front .front-cloud [data-multiple] [data-movement] span {
+        background-image: url('../images/sp/front-cloud.png');
+        /* position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2; */
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        background-repeat: no-repeat;
+    }
+}
+
 .page {
     min-height: 100vh;
     width: 100%;
@@ -322,36 +341,47 @@ body {
 @media (max-width: 768px) {
     .page .page-back .back-sky [data-multiple] [data-movement] span {
         background-image: url('../images/sp/back-sky.png');
+        /* position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -2; */
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         z-index: -2;
+        /* coverにすると画面いっぱいになる */
+        background-size: cover;
+        background-repeat: repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
     }
 }
 
 @media (max-width: 768px) {
     .page .page-back .back-cloud [data-multiple] [data-movement] span {
         background-image: url('../images/sp/back-cloud.png');
-        position: fixed;
+        /* position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1; */
+        position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         z-index: -1;
-    }
-}
-
-@media (max-width: 768px) {
-    .page .page-front .front-cloud [data-multiple] [data-movement] span {
-        background-image: url('../images/sp/front-cloud.png');
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 2;
+        background-repeat: no-repeat;
     }
 }
 
