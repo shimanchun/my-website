@@ -9,16 +9,18 @@
     <link rel="stylesheet" href="./styles/main.css">
     <script src="./src/main.js" defer="defer"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+
 </head>
 
 <body>
     <div class="page">
         <nav class="nav">
-            <h3>理工祭2024</h3>
+            <h3>RIKO FESTIVAL 2024</h3>
             <div class="nav-links">
                 <a href="#bands">ARTIST</a>
                 <a href="#schedule">TIMETABLE</a>
-                <a href="#access">アクセス</a>
             </div>
         </nav>
         <div class="page-back">
@@ -54,11 +56,11 @@
                             <div class="hero-content">
                                 <h1>理工祭2024</h1>
                                 <p>国際理工軽音楽クラブ 年に一度の祭典</p>
-                                <a href="#tickets" class="cta-button">チケット予約受付中！</a>
                             </div>
                         </section>
 
                         <section id="bands" class="bands">
+                            <h2>ARTIST</h2>
                             <div class="band-grid">
                                 <div class="band-card">
                                     <div class="band-image"></div>
@@ -104,28 +106,44 @@
                         </section>
 
                         <section id="schedule" class="schedule">
-                            <h2>タイムテーブル</h2>
-                            <div class="timeline">
-                                <div class="event">
-                                    <div class="time">13:00</div>
-                                    <div class="description">
-                                        <h3>開場・開演</h3>
-                                        <p>THE ROOKIES</p>
-                                    </div>
+                            <h2>TIMETABLE</h2>
+                            <div class="timetable">
+                                <!-- 各スロットにアニメーション効果を付加 -->
+                                <div class="time-slot">
+                                    <span class="time">12:00~</span>
+                                    <span class="artist">𠮷田隆雅 ~ソロ~</span>
                                 </div>
-                                <div class="event">
-                                    <div class="time">14:30</div>
-                                    <div class="description">
-                                        <h3>SOUND STORM</h3>
-                                        <p>2年生メインステージ</p>
-                                    </div>
+                                <div class="time-slot">
+                                    <span class="time">12:10~</span>
+                                    <span class="artist">即席バンド</span>
                                 </div>
-                                <div class="event">
-                                    <div class="time">16:00</div>
-                                    <div class="description">
-                                        <h3>BLUE NOTES</h3>
-                                        <p>3年生フィナーレ</p>
-                                    </div>
+                                <div class="time-slot">
+                                    <span class="time">12:20~</span>
+                                    <span class="artist">あの</span>
+                                </div>
+                                <div class="time-slot">
+                                    <span class="time">12:30~</span>
+                                    <span class="artist">インスタンズ</span>
+                                </div>
+                                <div class="time-slot">
+                                    <span class="time">12:40~</span>
+                                    <span class="artist">ドラム募集中</span>
+                                </div>
+                                <div class="time-slot">
+                                    <span class="time">12:50~</span>
+                                    <span class="artist">エトランゼ</span>
+                                </div>
+                                <div class="time-slot">
+                                    <span class="time">13:00~</span>
+                                    <span class="artist">シャルル・ペロー</span>
+                                </div>
+                                <div class="time-slot">
+                                    <span class="time">13:10~</span>
+                                    <span class="artist">（未定）</span>
+                                </div>
+                                <div class="time-slot">
+                                    <span class="time">13:20~</span>
+                                    <span class="artist">DJ RIKO</span>
                                 </div>
                             </div>
                         </section>
@@ -133,6 +151,8 @@
                 </div>
             </div>
         </div>
+    </div>
+
 </body>
 
 </html>

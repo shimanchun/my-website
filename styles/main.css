@@ -1,72 +1,15 @@
-.page .page-back .back-sky [data-multiple] [data-movement] span {
-    background-image: url('../images/pc/back-sky.png');
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: -2;
-}
-.page .page-back .back-cloud [data-multiple] [data-movement] span {
-    background-image: url('../images/pc/back-cloud.png');
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: -1;
-}
-.page .page-front .front-cloud [data-multiple] [data-movement] span {
-    background: url('../images/pc/front-cloud.png');
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: 2;
-}
-.page .page-back .back-sky [data-multiple] [data-movement] span,
-.page .page-back .back-cloud [data-multiple] [data-movement] span,
-.page .page-front .front-cloud [data-multiple] [data-movement] span {
-    justify-content: center;  
-    align-items: center;      
-    background-size: contain;
-    min-height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Girassol&family=UnifrakturMaguntia&display=swap');
+
+* {
+    box-sizing: border-box;
 }
 
-.page .page-back .back-sky [data-multiple] [data-movement] span {
-    background-repeat: repeat-y;
-    background-repeat: repeat-x;
+body {
+    font-family: 'Girassol', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    
 }
-
-@media (max-width: 768px) {
-    .page .page-back .back-sky [data-multiple] [data-movement] span {
-        background-image: url('../images/sp/back-sky.png');
-        position: fixed;
-        top: 0; left: 0; right: 0; bottom: 0;
-        z-index: -2;
-    }
-}
-@media (max-width: 768px) {
-    .page .page-back .back-cloud [data-multiple] [data-movement] span {
-        background-image: url('../images/sp/back-cloud.png');
-        position: fixed;
-        top: 0; left: 0; right: 0; bottom: 0;
-        z-index: -1;
-    }
-}
-@media (max-width: 768px) {
-    .page .page-front .front-cloud [data-multiple] [data-movement] span {
-        background-image: url('../images/sp/front-cloud.png');
-        position: fixed;
-        top: 0; left: 0; right: 0; bottom: 0;
-        z-index: 2;
-    }
-}
-
-.page .page-front .front-cloud [data-multiple] [data-movement] span {
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    margin: auto
-}
-
-/* 画像以外のスタイル */
-
 
 .hero {
     height: 100vh;
@@ -79,8 +22,8 @@
 
 .hero-content {
     text-align: center;
-    z-index: 2;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 0;
 }
 
 .hero h1 {
@@ -89,7 +32,7 @@
     margin-bottom: 1rem;
     transform: translateY(50px);
     opacity: 0;
-    color: #fff;
+    color: #ff3366;
 }
 
 .hero p {
@@ -97,55 +40,20 @@
     margin-bottom: 2rem;
     transform: translateY(30px);
     opacity: 0;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background: linear-gradient(45deg, #ff3366, #ff6b6b);
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transform: translateY(20px);
-    opacity: 0;
-    transition: transform 0.3s;
-    position: relative;
-    overflow: hidden;
-}
-
-.cta-button:hover {
-    transform: scale(1.05);
-}
-
-.cta-button::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-        rgba(255, 255, 255, 0.2),
-        transparent
-    );
-    transform: rotate(45deg);
-    animation: buttonShine 3s infinite;
-}
-
-@keyframes buttonShine {
-    from {
-        transform: translateX(-100%) rotate(45deg);
-    }
-    to {
-        transform: translateX(100%) rotate(45deg);
-    }
+    color: #fff;
 }
 
 .bands {
     padding: 5rem 2rem;
     position: relative;
-    z-index: 2;
+    z-index: 0;
+}
+
+.bands h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ff3366;
 }
 
 .band-grid {
@@ -179,19 +87,30 @@
 
 .band-card {
     color: white;
+    /* margin-bottom: 20px; */
+}
+
+.band-card h3 {
+    margin-bottom: 0px;
+}
+
+.band-card p {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .schedule {
     padding: 5rem 2rem;
     /* background: rgba(0, 20, 40, 0.9); */
     position: relative;
-    z-index: 2;
+    z-index: 0;
 }
 
 .schedule h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
+    color: #ff3366;
 }
 
 .timeline {
@@ -227,6 +146,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: white;
     /* background: rgba(0, 20, 40, 0.8); */
     /* backdrop-filter: blur(10px); */
     z-index: 100;
@@ -235,6 +155,10 @@
 .nav-links {
     display: flex;
     gap: 2rem;
+    /* position: fixed;
+    right: 0;
+    top: 50px; 
+    width: 200px;  */
 }
 
 .nav-links a {
@@ -246,4 +170,252 @@
 
 .nav-links a:hover {
     color: #ff3366;
+}
+
+.page .page-front .front-cloud [data-multiple] [data-movement] span {
+    background: url('../images/pc/front-cloud.png');
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    background-repeat: no-repeat;
+}
+
+.page {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.page .page-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.back-sky {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.back-sky [data-multiple] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.back-sky [data-movement] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.page .page-front .front-cloud [data-multiple] [data-movement] span {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto
+}
+
+.back-sky {
+    position: relative;
+    min-height: 100vh;
+}
+
+.page .page-back .back-sky [data-multiple] [data-movement] span {
+    position: relative;
+    min-height: 100vh;
+}
+
+.page .page-back .back-sky [data-multiple] [data-movement] span,
+.page .page-back .back-cloud [data-multiple] [data-movement] span,
+.page .page-front .front-cloud [data-multiple] [data-movement] span {
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    min-height: 100vh;
+}
+
+.page .page-back .back-sky [data-multiple] [data-movement] span {
+    background-repeat: repeat-y;
+    /* background-repeat: repeat-x; */
+}
+
+.page .page-back .back-sky [data-multiple] [data-movement] span {
+    background-image: url('../images/pc/back-sky.png');
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+    /* coverにすると画面いっぱいになる */
+    background-size: contain;
+    background-repeat: repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.page-front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.page .page-back .back-cloud [data-multiple] [data-movement] span {
+    background-image: url('../images/pc/back-cloud.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+}
+
+
+@media (max-width: 768px) {
+    .page .page-back .back-sky [data-multiple] [data-movement] span {
+        background-image: url('../images/sp/back-sky.png');
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -2;
+    }
+}
+
+@media (max-width: 768px) {
+    .page .page-back .back-cloud [data-multiple] [data-movement] span {
+        background-image: url('../images/sp/back-cloud.png');
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .page .page-front .front-cloud [data-multiple] [data-movement] span {
+        background-image: url('../images/sp/front-cloud.png');
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+    }
+}
+
+.footer {
+    background-image: url('/images/pc/back-sky.png');
+    background-repeat: no-repeat;
+    /* 繰り返さない */
+    background-size: cover;
+    /* 背景画像をコンテナに合わせて調整 */
+    z-index: -2;
+    position: absolute;
+    /* 絶対位置指定で自由に動かせる */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.timetable {
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #6fdbdc, #28b5b5);
+    color: white;
+    width: 80%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.time-slot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s;
+}
+
+.time-slot:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.time {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.artist {
+    font-size: 18px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.timetable {
+    animation: fadeIn 2s ease-out forwards;
 }
