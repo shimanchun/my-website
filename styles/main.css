@@ -94,6 +94,52 @@ body {
     border-radius: 5px;
 }
 
+/* .band-image {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+} */
+
+.band-card:nth-child(1) .band-image {
+    background-image: url(''); /* 吉田隆雅 */
+}
+
+.band-card:nth-child(2) .band-image {
+    background-image: url(''); /* 即席バンド */
+}
+
+.band-card:nth-child(3) .band-image {
+    background-image: url(''); /* あの */
+}
+
+.band-card:nth-child(4) .band-image {
+    background-image: url(''); /* インスタンズ */
+}
+
+.band-card:nth-child(5) .band-image {
+    background-image: url(''); /* ドラム募集中 */
+}
+
+.band-card:nth-child(6) .band-image {
+    background-image: url(''); /* エトランゼ */
+}
+
+.band-card:nth-child(7) .band-image {
+    background-image: url(''); /* シャルル・ペロー */
+}
+
+.band-card:nth-child(8) .band-image {
+    background-image: url(''); /* （未定） */
+}
+
+.band-card:nth-child(9) .band-image {
+    background-image: url('/images/band/dj_rico.jpg'); /* DJ RICO */
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    
+}
 .band-card {
     color: white;
     /* margin-bottom: 20px; */
