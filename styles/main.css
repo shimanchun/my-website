@@ -80,6 +80,7 @@ body {
     text-align: center;
     transition: transform 0.3s;
     backdrop-filter: blur(1px);
+    overflow: hidden
 }
 
 .band-card:hover {
@@ -93,13 +94,6 @@ body {
     margin-bottom: 1rem;
     border-radius: 5px;
 }
-
-/* .band-image {
-    width: 150px;
-    height: 150px;
-    background-size: cover;
-    background-position: center;
-} */
 
 .band-card:nth-child(1) .band-image {
     background-image: url(''); /* 吉田隆雅 */
@@ -130,10 +124,6 @@ body {
 }
 
 .band-card:nth-child(8) .band-image {
-    background-image: url(''); /* （未定） */
-}
-
-.band-card:nth-child(9) .band-image {
     background-image: url('/images/band/dj_rico.jpg'); /* DJ RICO */
     width: 100%;
     background-size: cover;
@@ -251,6 +241,7 @@ body {
     bottom: 0;
     z-index: 3;
     background-repeat: no-repeat;
+    pointer-events: none;
 }
 
 @media (max-width: 768px) {
@@ -269,6 +260,7 @@ body {
         bottom: 0;
         z-index: 3;
         background-repeat: no-repeat;
+        pointer-events: none;
     }
 }
 

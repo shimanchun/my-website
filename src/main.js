@@ -27,3 +27,9 @@ anime({
     duration: 4000, // 1000ミリ秒（1秒）でアニメーション完了
     easing: 'easeOutExpo' // イージング関数
 });
+
+document.querySelectorAll('.band-card').forEach(card => {
+    card.addEventListener('click', () => {
+        card.classList.toggle('expanded');
+    });
+});
