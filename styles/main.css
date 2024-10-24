@@ -108,7 +108,10 @@ body {
 }
 
 .band-card:nth-child(4) .band-image {
-    background-image: url(''); /* インスタンズ */
+    background-image: url('../images/band/instans.png'); /* インスタンズ */
+    width: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 .band-card:nth-child(5) .band-image {
