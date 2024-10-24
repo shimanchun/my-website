@@ -124,7 +124,7 @@ body {
 }
 
 .band-card:nth-child(8) .band-image {
-    background-image: url('/images/band/dj_rico.jpg'); /* DJ RICO */
+    background-image: url('../images/band/dj_rico.jpg'); /* DJ RICO */
     width: 100%;
     background-size: cover;
     background-position: center;
