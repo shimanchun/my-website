@@ -96,11 +96,17 @@ body {
 }
 
 .band-card:nth-child(1) .band-image {
-    background-image: url(''); /* 吉田隆雅 */
+    background-image: url('../images/band/yosida.jpg'); /* 吉田隆雅 */
+    width: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 .band-card:nth-child(2) .band-image {
-    background-image: url(''); /* 即席バンド */
+    background-image: url('../images/band/sokyoubands.jpeg'); /* 即席バンド */
+    width: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 .band-card:nth-child(3) .band-image {
@@ -132,7 +138,10 @@ body {
 }
 
 .band-card:nth-child(7) .band-image {
-    background-image: url(''); /* シャルル・ペロー */
+    background-image: url('../images/band/charles.jpg'); /* シャルル・ペロー */
+    width: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 .band-card:nth-child(8) .band-image {
