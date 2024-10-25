@@ -104,7 +104,10 @@ body {
 }
 
 .band-card:nth-child(3) .band-image {
-    background-image: url(''); /* あの */
+    background-image: url('../images/band/ano.jpeg'); /* あの */
+    width: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 .band-card:nth-child(4) .band-image {
@@ -122,7 +125,10 @@ body {
 }
 
 .band-card:nth-child(6) .band-image {
-    background-image: url(''); /* エトランゼ */
+    background-image: url('../images/band/etranze.jpg'); /* エトランゼ */
+    width: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 .band-card:nth-child(7) .band-image {
