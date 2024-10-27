@@ -96,7 +96,7 @@ body {
 }
 
 .band-card:nth-child(1) .band-image {
-    background-image: url('../images/band/yosida.jpg'); /* 吉田隆雅 */
+    background-image: url('../images/band/yoseatume.jpg'); /* 吉田隆雅 */
     width: 100%;
     background-size: cover;
     background-position: center;
